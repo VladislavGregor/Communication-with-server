@@ -25,9 +25,8 @@ class Websocket extends Server {
        return Websocket.io;
 
    }
-}
 
-public initializeHandlers(socketHandlers: Array<any>) {
+   public initializeHandlers(socketHandlers: Array<any>) {
 
 
     socketHandlers.forEach(element => {
@@ -41,5 +40,7 @@ public initializeHandlers(socketHandlers: Array<any>) {
         }
     });
 }
+}
 
-export default {Websocket};
+
+export default Websocket;

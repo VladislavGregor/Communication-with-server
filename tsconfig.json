@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+      "noImplicitAny": false,
       "strictPropertyInitialization": false,
       "module": "commonjs",
       "esModuleInterop": true,

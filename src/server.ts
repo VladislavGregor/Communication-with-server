@@ -1,6 +1,7 @@
 import { createServer } from 'http';
 
-import OrdersSocket from './orders.socket';
+import OrdersSocket from './websocket/orders.socket';
+
 
 
 require('dotenv').config()
@@ -25,6 +26,7 @@ const routingControllerOptions: RoutingControllersOptions = {
 const app = createExpressServer(routingControllerOptions);
 
 const httpServer = createServer(app);
+
 const io = Websocket.getInstance(httpServer);
 
 io.initializeHandlers([
@@ -36,9 +38,6 @@ httpServer.listen(port, () => {
    console.log(`This is working in port ${port}`);
 });
 
+
+
 import Websocket from './websocket/websocket';
-
-
-httpServer.listen(port, () => {
-   console.log(`This is working in port ${port}`);
-});

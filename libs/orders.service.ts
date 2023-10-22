@@ -1,4 +1,4 @@
-import Websocket from "../websocket/websocket";
+import Websocket from "../src/websocket/websocket";
 
 
 class OrdersService {
